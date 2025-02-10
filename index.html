@@ -3,59 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajith's Portfolio</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; background-color: #f4f4f4; }
-        header { background: #333; color: #fff; padding: 15px; }
-        nav { display: flex; justify-content: center; gap: 20px; padding: 10px; background: #444; }
-        nav a { color: white; text-decoration: none; font-size: 18px; }
-        section { padding: 20px; max-width: 800px; margin: auto; background: white; }
-        h2 { color: #333; }
-        .chart { width: 100%; height: 300px; }
-    </style>
+    <title>Muni Ajith Kumar - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <header>
-        <h1>Ajith's Portfolio</h1>
+        <h1>Muni Ajith Kumar</h1>
+        <p>Data Analyst | Business Intelligence | Python | SQL | AWS</p>
     </header>
+    
     <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
     
     <section id="about">
         <h2>About Me</h2>
-        <p>Hello! I am Muni Ajith Kumar, a Data Analyst with expertise in Python, SQL, and Data Visualization.</p>
+        <p>Experienced Business Intelligence Analyst with expertise in automating data analysis tasks, developing dashboards, and leveraging cloud solutions.</p>
+    </section>
+    
+    <section id="resume">
+        <h2>Resume</h2>
+        <p><strong>Education:</strong> Masters in Advanced Data Analytics, University of North Texas</p>
+        <p><strong>Experience:</strong> Capital One (Business Data Analyst), Cybage Software (Data Analyst)</p>
+        <p><strong>Skills:</strong> Python, SQL, Tableau, Power BI, AWS, Data Visualization</p>
     </section>
     
     <section id="projects">
         <h2>Projects</h2>
-        <p>Here are some of my data analytics projects with visualizations.</p>
-        <canvas id="analyticsChart" class="chart"></canvas>
+        <canvas id="chart"></canvas>
+        <script>
+            const ctx = document.getElementById('chart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Python', 'SQL', 'Power BI', 'AWS', 'Tableau'],
+                    datasets: [{
+                        label: 'Skill Proficiency',
+                        data: [90, 85, 80, 75, 70],
+                        backgroundColor: 'rgba(54, 162, 235, 0.6)'
+                    }]
+                }
+            });
+        </script>
     </section>
     
     <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: muniajithkumargollagunta@gmail.com.com</p>
-        <p>LinkedIn: <a href="#">linkedin.com/in/ajith</a></p>
+        <h2>Contact</h2>
+        <p>Email: muniajithkumargollagunta@gmail.com</p>
+        <p>LinkedIn: <a href="#">www.linkedin.com/in/ajith-kumar-gollagunta</a></p>
     </section>
-
-    <script>
-        var ctx = document.getElementById('analyticsChart').getContext('2d');
-        var myChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['Project A', 'Project B', 'Project C'],
-                datasets: [{
-                    label: 'Data Insights',
-                    data: [85, 70, 90],
-                    backgroundColor: ['red', 'blue', 'green']
-                }]
-            }
-        });
-    </script>
+    
+    <footer>
+        <p>&copy; 2025 Muni Ajith Kumar</p>
+    </footer>
 </body>
 </html>
 
