@@ -10,7 +10,7 @@
 <body>
     <header>
         <h1>Muni Ajith Kumar</h1>
-        <p>Data Analyst | Business Intelligence | Python | SQL | AWS</p>
+        <p>Data Analyst | Data Scientist | Business Intelligence</p>
     </header>
     
     <nav>
@@ -24,29 +24,52 @@
     
     <section id="about">
         <h2>About Me</h2>
-        <p>Experienced Business Intelligence Analyst with expertise in automating data analysis tasks, developing dashboards, and leveraging cloud solutions.</p>
+        <p>Passionate Data Analyst with experience in transforming raw data into actionable insights. Proficient in Python, SQL, and BI tools.</p>
     </section>
     
     <section id="resume">
         <h2>Resume</h2>
-        <p><strong>Education:</strong> Masters in Advanced Data Analytics, University of North Texas</p>
-        <p><strong>Experience:</strong> Capital One (Business Data Analyst), Cybage Software (Data Analyst)</p>
-        <p><strong>Skills:</strong> Python, SQL, Tableau, Power BI, AWS, Data Visualization</p>
+        <h3>Education</h3>
+        <p><strong>Master's in Data Science</strong> - XYZ University (2020-2022)</p>
+        <p><strong>Bachelor's in Computer Science</strong> - ABC College (2016-2020)</p>
+        
+        <h3>Work Experience</h3>
+        <p><strong>Data Analyst</strong> - TechCorp Solutions (2022-Present)</p>
+        <ul>
+            <li>Developed interactive dashboards for business performance monitoring.</li>
+            <li>Implemented machine learning models to predict customer behavior.</li>
+        </ul>
+        
+        <p><strong>Intern - Business Intelligence</strong> - Data Insights Inc. (2021-2022)</p>
+        <ul>
+            <li>Assisted in SQL query optimization for large datasets.</li>
+            <li>Automated report generation using Python scripts.</li>
+        </ul>
+        
+        <h3>Skills</h3>
+        <ul>
+            <li>Programming: Python, SQL, R</li>
+            <li>Data Visualization: Power BI, Tableau, Matplotlib</li>
+            <li>Machine Learning: Regression, Classification, Clustering</li>
+        </ul>
     </section>
     
     <section id="projects">
         <h2>Projects</h2>
-        <canvas id="chart"></canvas>
+        <h3>Automated Data Analysis Report</h3>
+        <p>Developed a Python-based pipeline to clean and visualize sales data trends.</p>
+        <canvas id="dataChart"></canvas>
         <script>
-            const ctx = document.getElementById('chart').getContext('2d');
-            new Chart(ctx, {
-                type: 'bar',
+            var ctx = document.getElementById('dataChart').getContext('2d');
+            var dataChart = new Chart(ctx, {
+                type: 'line',
                 data: {
-                    labels: ['Python', 'SQL', 'Power BI', 'AWS', 'Tableau'],
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
                     datasets: [{
-                        label: 'Skill Proficiency',
-                        data: [90, 85, 80, 75, 70],
-                        backgroundColor: 'rgba(54, 162, 235, 0.6)'
+                        label: 'Sales Data',
+                        data: [100, 200, 300, 250, 400],
+                        borderColor: 'blue',
+                        borderWidth: 2
                     }]
                 }
             });
@@ -54,15 +77,12 @@
     </section>
     
     <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: muniajithkumargollagunta@gmail.com</p>
-        <p>LinkedIn: <a href="#">www.linkedin.com/in/ajith-kumar-gollagunta</a></p>
+        <h2>Contact Me</h2>
+        <p>Email: muni.ajith@example.com</p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/muniajith">linkedin.com/in/muniajith</a></p>
     </section>
-    
-    <footer>
-        <p>&copy; 2025 Muni Ajith Kumar</p>
-    </footer>
 </body>
 </html>
+
 
 
