@@ -3,11 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Data Analytics Portfolio</title>
+    <title>Data Analytics Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        h1, h2 {
+            color: #6200ea;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        pre {
+            background: #272822;
+            color: #f8f8f2;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background: #333;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Portfolio</h1>
-    <p>This is my data analytics project showcase.</p>
+
+    <div class="container">
+        <h1>Data Analytics Portfolio - Reporting Dashboard</h1>
+        
+        <h2>1. Automated Data Analysis Report</h2>
+        <p><strong>Objective:</strong> Perform automated data cleaning, transformation, and visualization to identify trends.</p>
+        
+        <h3>Data Cleaning Process:</h3>
+        <ul>
+            <li>Removed missing values</li>
+            <li>Converted date column to DateTime format</li>
+        </ul>
+
+        <h3>Visualization:</h3>
+        <pre>
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Load Data
+df = pd.read_csv('data.csv')
+
+# Data Cleaning
+df.dropna(inplace=True)
+df['Date'] = pd.to_datetime(df['Date'])
+
+# Data Visualization
+plt.figure(figsize=(12,6))
+sns.lineplot(x='Date', y='Value', data=df, marker='o', linewidth=2, color='blue')
+plt.title('Data Trends Over Time', fontsize=14)
+plt.xlabel('Date', fontsize=12)
+plt.ylabel('Value', fontsize=12)
+plt.grid(True)
+plt.show()
+        </pre>
+
+        <h3>Key Insights:</h3>
+        <ul>
+            <li>Data trends show an increasing pattern over time.</li>
+            <li>Missing values were successfully handled to maintain data integrity.</li>
+        </ul>
+
+        <hr>
+
+        <h2>2. Investment Portfolio Analysis Report</h2>
+        <p><strong>Objective:</strong> Evaluate stock performance using historical data to calculate annual return.</p>
+
+        <h3>Method:</h3>
+        <pre>
+import numpy as np
+
+def calculate_annual_return(prices):
+    returns = prices.pct_change().dropna()
+    annual_return = np.mean(returns) * 252
+    return annual_return
+
+# Example Usage
+stock_prices = pd.Series([100, 105, 102, 110, 115])
+print("Annual Return:", calculate_annual_return(stock_prices))
+        </pre>
+
+        <h3>Key Findings:</h3>
+        <ul>
+            <li>The portfolio shows a positive annual return.</li>
+            <li>Volatility needs further assessment for risk management.</li>
+        </ul>
+
+        <hr>
+
+        <h2>3. SQL Data Warehousing Report</h2>
+        <p><strong>Objective:</strong> Store and analyze transaction data efficiently for business intelligence.</p>
+
+        <h3>Query:</h3>
+        <pre>
+CREATE TABLE transactions (
+    id SERIAL PRIMARY KEY,
+    date DATE,
+    amount DECIMAL(10,2),
+    category VARCHAR(50)
+);
+
+SELECT category, SUM(amount) 
+FROM transactions 
+GROUP BY category 
+ORDER BY SUM(amount) DESC;
+        </pre>
+
+        <h3>Insights:</h3>
+        <ul>
+            <li>Top spending categories identified for budget allocation.</li>
+            <li>Structured database enhances data retrieval efficiency.</li>
+        </ul>
+
+        <hr>
+
+        <h2>4. AWS Deployment Report</h2>
+        <p><strong>Objective:</strong> Deploy data solutions on AWS for scalability.</p>
+
+        <h3>Implementation:</h3>
+        <pre>
+import boto3
+
+# Upload file to S3
+s3 = boto3.client('s3')
+s3.upload_file('data.csv', 'my-bucket', 'data.csv')
+
+# Start an EC2 instance
+ec2 = boto3.client('ec2')
+response = ec2.run_instances(
+    ImageId='ami-12345678',
+    MinCount=1,
+    MaxCount=1,
+    InstanceType='t2.micro'
+)
+print("EC2 Instance ID:", response['Instances'][0]['InstanceId'])
+        </pre>
+
+        <h3>Key Takeaways:</h3>
+        <ul>
+            <li>Data successfully stored in an AWS S3 bucket.</li>
+            <li>EC2 instance launched for computational tasks.</li>
+        </ul>
+    </div>
+
+    <footer>
+        &copy; 2025 Ajith Gollagunta | Data Analytics Portfolio
+    </footer>
+
 </body>
 </html>
-
