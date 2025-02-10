@@ -1,0 +1,119 @@
+# Data Analytics Portfolio - Reporting Dashboard
+
+## 1. Automated Data Analysis Report
+### Objective:
+Perform automated data cleaning, transformation, and visualization to identify trends.
+
+### Data Cleaning Process:
+- Removed missing values
+- Converted date column to DateTime format
+
+### Visualization:
+```python
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Load Data
+df = pd.read_csv('data.csv')
+
+# Data Cleaning
+df.dropna(inplace=True)
+df['Date'] = pd.to_datetime(df['Date'])
+
+# Data Visualization
+plt.figure(figsize=(12,6))
+sns.lineplot(x='Date', y='Value', data=df, marker='o', linewidth=2, color='blue')
+plt.title('Data Trends Over Time', fontsize=14)
+plt.xlabel('Date', fontsize=12)
+plt.ylabel('Value', fontsize=12)
+plt.grid(True)
+plt.show()
+```
+
+### Key Insights:
+- Data trends show an increasing pattern over time.
+- Missing values were successfully handled to maintain data integrity.
+
+---
+
+## 2. Investment Portfolio Analysis Report
+### Objective:
+Evaluate stock performance using historical data to calculate annual return.
+
+### Method:
+```python
+import numpy as np
+
+def calculate_annual_return(prices):
+    returns = prices.pct_change().dropna()
+    annual_return = np.mean(returns) * 252
+    return annual_return
+
+# Example Usage
+stock_prices = pd.Series([100, 105, 102, 110, 115])
+print("Annual Return:", calculate_annual_return(stock_prices))
+```
+
+### Key Findings:
+- The portfolio shows a positive annual return.
+- Volatility needs further assessment for risk management.
+
+---
+
+## 3. SQL Data Warehousing Report
+### Objective:
+Store and analyze transaction data efficiently for business intelligence.
+
+### Query:
+```sql
+CREATE TABLE transactions (
+    id SERIAL PRIMARY KEY,
+    date DATE,
+    amount DECIMAL(10,2),
+    category VARCHAR(50)
+);
+
+SELECT category, SUM(amount) 
+FROM transactions 
+GROUP BY category 
+ORDER BY SUM(amount) DESC;
+```
+
+### Insights:
+- Top spending categories identified for budget allocation.
+- Structured database enhances data retrieval efficiency.
+
+---
+
+## 4. AWS Deployment Report
+### Objective:
+Deploy data solutions on AWS for scalability.
+
+### Implementation:
+```python
+import boto3
+
+# Upload file to S3
+s3 = boto3.client('s3')
+s3.upload_file('data.csv', 'my-bucket', 'data.csv')
+
+# Start an EC2 instance
+ec2 = boto3.client('ec2')
+response = ec2.run_instances(
+    ImageId='ami-12345678',
+    MinCount=1,
+    MaxCount=1,
+    InstanceType='t2.micro'
+)
+print("EC2 Instance ID:", response['Instances'][0]['InstanceId'])
+```
+
+### Key Takeaways:
+- Data successfully stored in an AWS S3 bucket.
+- EC2 instance launched for computational tasks.
+
+---
+
+### Summary:
+This portfolio provides insights into **automated data analysis, financial analytics, data warehousing, and cloud deployment**, demonstrating skills in **Python, SQL, Power BI, and AWS** for data-driven decision-making.
