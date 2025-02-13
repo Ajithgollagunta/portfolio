@@ -3,86 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muni Ajith Kumar - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Muni Ajith Kumar - Data Analyst Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
-        <h1>Muni Ajith Kumar</h1>
-        <p>Data Analyst | Data Scientist | Business Intelligence</p>
+        <h1>Muni Ajith Kumar Gollagunta</h1>
+        <h2>Data Analyst | Business Intelligence | Data Visualization</h2>
+        <p>📍 North Carolina | 📞 (940) 287-4626 | ✉️ <a href="mailto:muniajithkumargollagunta@gmail.com">muniajithkumargollagunta@gmail.com</a></p>
     </header>
-    
+
     <nav>
         <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#resume">Resume</a></li>
+            <li><a href="#summary">Summary</a></li>
+            <li><a href="#skills">Technical Skills</a></li>
+            <li><a href="#experience">Professional Experience</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education & Certifications</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-    
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Passionate Data Analyst with experience in transforming raw data into actionable insights. Proficient in Python, SQL, and BI tools.</p>
+
+    <section id="summary">
+        <h2>Summary</h2>
+        <p>Experienced Business Intelligence Analyst with 3+ years of expertise in automating data analysis, developing analytical tools, and creating dashboards across finance and education. Proficient in Python, SQL, Power BI, and AWS for data-driven decision-making.</p>
     </section>
-    
-    <section id="resume">
-        <h2>Resume</h2>
-        <h3>Education</h3>
-        <p><strong>Master's in Data Science</strong> - XYZ University (2020-2022)</p>
-        <p><strong>Bachelor's in Computer Science</strong> - ABC College (2016-2020)</p>
-        
-        <h3>Work Experience</h3>
-        <p><strong>Data Analyst</strong> - TechCorp Solutions (2022-Present)</p>
-        <ul>
-            <li>Developed interactive dashboards for business performance monitoring.</li>
-            <li>Implemented machine learning models to predict customer behavior.</li>
-        </ul>
-        
-        <p><strong>Intern - Business Intelligence</strong> - Data Insights Inc. (2021-2022)</p>
-        <ul>
-            <li>Assisted in SQL query optimization for large datasets.</li>
-            <li>Automated report generation using Python scripts.</li>
-        </ul>
-        
-        <h3>Skills</h3>
-        <ul>
-            <li>Programming: Python, SQL, R</li>
-            <li>Data Visualization: Power BI, Tableau, Matplotlib</li>
-            <li>Machine Learning: Regression, Classification, Clustering</li>
-        </ul>
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <div>
+                <h3>Languages</h3>
+                <p>Python, SQL, R</p>
+            </div>
+            <div>
+                <h3>Frameworks & Libraries</h3>
+                <p>NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn, TensorFlow</p>
+            </div>
+            <div>
+                <h3>Databases</h3>
+                <p>MySQL, PostgreSQL, MongoDB</p>
+            </div>
+            <div>
+                <h3>Visualization Tools</h3>
+                <p>Power BI, Tableau, Excel</p>
+            </div>
+            <div>
+                <h3>Cloud & DevOps</h3>
+                <p>AWS (S3, EC2), Git, Docker</p>
+            </div>
+            <div>
+                <h3>Analytical Skills</h3>
+                <p>Data Cleaning, EDA, Statistical Analysis, Regression, A/B Testing</p>
+            </div>
+        </div>
     </section>
-    
+
+    <section id="experience">
+        <h2>Professional Experience</h2>
+
+        <div class="job">
+            <h3>Business Data Analyst | Capital One Financial, NJ | Oct 2023 - Present</h3>
+            <ul>
+                <li>Automated recurring data tasks using Python, reducing manual work by 40%.</li>
+                <li>Developed an investment portfolio analysis tool in Python & Seaborn for trend visualization.</li>
+                <li>Created Power BI dashboards with advanced DAX calculations, increasing data visibility by 60%.</li>
+                <li>Designed and implemented SQL-based data warehousing solutions.</li>
+                <li>Built predictive models for financial risk assessment and credit analysis.</li>
+                <li>Ensured 100% compliance with data governance frameworks.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <h3>Data Analyst | Cybage Software, India | Aug 2020 - Nov 2022</h3>
+            <ul>
+                <li>Automated data cleaning processes using Python and Pandas.</li>
+                <li>Designed complex SQL queries for educational analytics, improving data accuracy.</li>
+                <li>Developed Tableau dashboards for financial KPIs.</li>
+                <li>Implemented AWS solutions for cloud-based data storage and processing.</li>
+            </ul>
+        </div>
+    </section>
+
     <section id="projects">
         <h2>Projects</h2>
-        <h3>Automated Data Analysis Report</h3>
-        <p>Developed a Python-based pipeline to clean and visualize sales data trends.</p>
-        <canvas id="dataChart"></canvas>
-        <script>
-            var ctx = document.getElementById('dataChart').getContext('2d');
-            var dataChart = new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
-                    datasets: [{
-                        label: 'Sales Data',
-                        data: [100, 200, 300, 250, 400],
-                        borderColor: 'blue',
-                        borderWidth: 2
-                    }]
-                }
-            });
-        </script>
+
+        <div class="project">
+            <h3>Investment Portfolio Analysis</h3>
+            <p>Developed a Python tool using Seaborn to analyze investment performance trends.</p>
+        </div>
+
+        <div class="project">
+            <h3>Financial Risk & Credit Analysis</h3>
+            <p>Built predictive models in Scikit-learn to assess financial risk and optimize decision-making.</p>
+        </div>
     </section>
-    
+
+    <section id="education">
+        <h2>Education & Certifications</h2>
+        <p><strong>Master’s in Advanced Data Analytics</strong> - University of North Texas (May 2024)</p>
+        <p><strong>Bachelor in Technology</strong> - Sastra University, India (May 2021)</p>
+        <p><strong>Certifications:</strong> Microsoft Certified: Power BI Data Analyst Associate, Azure Data Engineer Associate</p>
+    </section>
+
     <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: muni.ajith@example.com</p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/muniajith">linkedin.com/in/muniajith</a></p>
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:muniajithkumargollagunta@gmail.com">muniajithkumargollagunta@gmail.com</a></p>
+        <p>LinkedIn: <a href="#">Your LinkedIn Profile</a></p>
     </section>
+
+    <footer>
+        <p>© 2024 Muni Ajith Kumar Gollagunta</p>
+    </footer>
+
 </body>
 </html>
-
-
-
